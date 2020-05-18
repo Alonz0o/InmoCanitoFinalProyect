@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/inicio">
+
+    <fragment
+        android:id="@+id/inicio"
+        android:name="com.example.inmocanito.ui.home.HomeFragment"
+        android:label="@string/menu_inicio"
+        tools:layout="@layout/fragment_inicio" />
+
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.example.inmocanito.ui.perfil.PerfilFragment"
+        android:label="@string/menu_perfil"
+        tools:layout="@layout/fragment_perfil" />
+
+    <activity
+        android:id="@+id/nav_propiedades"
+        android:name="com.example.inmocanito.ui.propiedades.PropiedadesActivity"
+        android:label="PropiedadesActivity"
+        tools:layout="@layout/activity_propiedades"
+        />
+
+    <activity
+        android:id="@+id/nav_inquilinos"
+        android:name="com.example.inmocanito.ui.inquilinos.InquilinosActivity"
+        android:label="@string/menu_inquilinos"
+        tools:layout="@layout/fragment_inquilinos" />
+
+    <fragment
+        android:id="@+id/nav_pagos"
+        android:name="com.example.inmocanito.ui.pagos.PagosFragment"
+        android:label="@string/menu_pagos"
+        tools:layout="@layout/fragment_pagos" >
+    <action
+        android:id="@+id/action_nav_pagos_to_nav_detalle_pago"
+        app:destination="@id/nav_detalle_pago" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_detalle_pago"
+        android:name="com.example.inmocanito.ui.pagos.PagosDetallesActivity"
+        android:label="Detalle Pago"
+        tools:layout="@layout/fragment_detalle_pago" />
+
+    <fragment
+        android:id="@+id/nav_contratos"
+        android:name="com.example.inmocanito.ui.perfil.PerfilFragment"
+        android:label="@string/menu_cotratos"
+        tools:layout="@layout/activity_propiedades" />
+
+    <fragment
+        android:id="@+id/nav_cerrarsesion"
+        android:name="com.example.inmocanito.ui.cerrarsesion.CerrarsesionFragment"
+        android:label="@string/menu_cerrarsesion"
+        tools:layout="@layout/fragment_perfil" />
+
+    <activity
+        android:id="@+id/pagosActivity"
+        android:name="com.example.inmocanito.ui.pagos.PagosActivity"
+        android:label="PagosActivity" />
+    <fragment
+        android:id="@+id/pagosdetalles"
+        android:name="com.example.inmocanito.pagosdetalles"
+        android:label="fragment_pagosdetalles"
+        tools:layout="@layout/fragment_pagosdetalles" />
+
+    <fragment
+        android:id="@+id/inquilinosDetalles"
+        android:name="com.example.inmocanito.inquilinosDetalles"
+        android:label="fragment_inquilinos_detalles"
+        tools:layout="@layout/fragment_inquilinos_detalles" />
+
+
+</navigation>

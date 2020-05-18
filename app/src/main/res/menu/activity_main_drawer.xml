@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/inicio"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_inicio" />
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/ic_man_close_up_with_a_pencil"
+            android:title="@string/menu_perfil" />
+        <item
+            android:id="@+id/nav_propiedades"
+            android:icon="@drawable/ic_business_center"
+            android:title="@string/menu_propiedades" />
+        <item
+            android:id="@+id/nav_inquilinos"
+            android:icon="@drawable/ic_door_key"
+            android:title="@string/menu_inquilinos" />
+        <item
+            android:id="@+id/pagosActivity"
+            android:icon="@drawable/ic_money_bag"
+            android:title="@string/menu_pagos" />
+        <item
+            android:id="@+id/nav_contratos"
+            android:icon="@drawable/ic_contract"
+            android:title="@string/menu_cotratos" />
+    </group>
+    <item android:title="Opciones">
+        <menu>
+            <item
+                android:id="@+id/nav_cerrarsesion"
+                android:icon="@drawable/ic_signs"
+                android:title="@string/menu_cerrarsesion" />
+        </menu>
+    </item>
+</menu>
