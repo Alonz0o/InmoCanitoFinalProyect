@@ -4,20 +4,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.propiedades.PropiedadesActivity" />
-        <activity android:name=".ui.pagos.PagosActivity" />
-        <activity android:name=".ui.pagos.PagosDetallesActivity" />
-        <activity android:name=".ui.inquilinos.InquilinosActivity" />
-        <activity android:name=".ui.inquilinos.InquilinosDetallesActivity" />
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/app_name"
@@ -27,6 +18,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.propiedades.PropiedadesDetallesActivity"
+            android:label="@string/detalle_propiedades"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".ui.inquilinos.InquilinosDetallesActivity"
+            android:label="@string/detalle_inquilinos"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".ui.pagos.PagosDetallesActivity"
+            android:label="@string/detalle_pagos"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".ui.contratos.ContratosDetallesActivity"
+            android:label="@string/detalle_contratos"
+            android:launchMode="singleInstance" />
     </application>
 
 </manifest>

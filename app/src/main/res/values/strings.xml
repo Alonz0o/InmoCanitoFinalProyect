@@ -1,51 +1,45 @@
 <resources>
 
-    <!-- Modificar -->
-    <array name="inquilinos">
-        <item>Nombre: Layca Fernandez Telefono: 2664755056 Email: fernan@gmail.com</item>
-        <item>Nombre: Claudia Fernandez Telefono: 2664755056 Email:fernan@gmail.com</item>
-        <item>Nombre: Ariel Fernandez Telefono: 2664755056 Email:fernan@gmail.com</item>
-        <item>Nombre: Benji Fernandez Telefono: 2664755056 Email:fernan@gmail.com</item>
-        <item>Nombre: Tito Fernandez Telefono: 2664755056 Email:fernan@gmail.com</item>
-        <item>Nombre: Mora Fernandez Telefono: 2664755056 Email:fernan@gmai.com</item>
-        <item>Nombre: Yuyin Fernandez Telefono: 2664755056 Email:fernan@gmail.com</item>
-        <item>Nombre: Roque Fernandez Telefono: 2664755056 Email:fernan@gmail.com</item>
-    </array>
-    <string-array name="propiedades">
-        <item><nombre>Departamento 1 </nombre></item>
-        <item><nombre>Departamento 2 </nombre></item>
-        <item><nombre>Departamento 3 </nombre></item>
-        <item><nombre>Departamento 4 </nombre></item>
-        <item><nombre>Departamento 5 </nombre></item>
-        <item><nombre>Departamento 6 </nombre></item>
-    </string-array>
-    <!-- Modificar -->
-    <string name="app_name">InmoCanito</string>
+    <string name="app_name">Inmobiliaria Canito</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Fernandez Ariel Alonso</string>
+    <string name="nav_header_subtitle">arielalonzg@gmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Opciones</string>
 
     <!-- String framentos -->
     <string name="menu_inicio">Inicio</string>
     <string name="menu_perfil">Perfil</string>
     <string name="menu_propiedades">Propiedades</string>
+    <string name="detalle_propiedades">Detalles de la Propiedad</string>
     <string name="menu_inquilinos">Inquilinos</string>
+    <string name="detalle_inquilinos">Detalles del Inquilinos</string>
     <string name="menu_pagos">Pagos</string>
+    <string name="detalle_pagos">Detalles del Pago</string>
     <string name="menu_cotratos">Contratos</string>
+    <string name="detalle_contratos">Detalles del Contrato</string>
     <string name="menu_cerrarsesion">Cerrar Sesión</string>
     <!-- String framentos -->
     <string name="home_second">Home Second</string>
 
-    <!-- Spinner Uso-Propiedades -->
+    <!-- Spinner Uso-Propiedad -->
     <string-array name="spinner_uso">
+        <item>Uso de la propiedad</item>
         <item>Cotidiano</item>
         <item>Comercial</item>
         <item>Marciano</item>
     </string-array>
-    <!-- Spinner Uso-Propiedades -->
+    <!-- Spinner Uso-Propiedad -->
+
+    <!-- Spinner Tipo-Propiedad -->
+    <string-array name="spinner_tipo">
+        <item>Tipo de propiedad</item>
+        <item>Casa</item>
+        <item>Edificio</item>
+        <item>mansion</item>
+    </string-array>
+    <!-- Spinner Uso-Propiedad -->
 
     <!-- String activity-login -->
     <string name="title">Inicio de sesion</string>

@@ -1,65 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".inquilinosDetalles">
+    android:background="@drawable/fondocanito"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/tvDetalleInquilinoDni"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="#03A9F4"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        />
 
-    <TextView
-        android:id="@+id/tvDetalleInquilinoApellido"
+    <EditText
+        android:id="@+id/etDetalleInquilinoDni"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="#03A9F4"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:hint="Dni del inquilino"
+        android:inputType="text"
+        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tvDetalleInquilinoNombre"
+    <EditText
+        android:id="@+id/etDetalleInquilinoApellido"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="#03A9F4"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"  />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:hint="Apellido del inquilino"
+        android:inputType="text"
+        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tvDetalleInquilinoDireccion"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="#03A9F4"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        />
 
-    <TextView
-        android:id="@+id/tvDetalleInquilinoTelefono"
+    <EditText
+        android:id="@+id/etDetalleInquilinoNombre"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="#03A9F4"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:hint="Nombre del inquilino"
+        android:inputType="text"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etDetalleInquilinoDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:hint="Direccion del inquilino"
+        android:inputType="text"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etDetalleInquilinoTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:hint="Telefono del inquilino"
+        android:inputType="text"
+        android:textStyle="bold" />
 
 </LinearLayout>

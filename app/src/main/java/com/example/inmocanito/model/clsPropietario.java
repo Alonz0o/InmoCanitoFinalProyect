@@ -1,18 +1,26 @@
 package com.example.inmocanito.model;
 
+import android.content.Intent;
+
+import com.example.inmocanito.MainActivity;
+
+import java.util.ArrayList;
+
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+
 public class clsPropietario {
     private int propietarioId;
-    private String dni;
+    private int dni;
     private String apellido;
     private String nombre;
-    private String telefono;
+    private int telefono;
     private String email;
     private String clave;
 
     public clsPropietario() {
     }
 
-    public clsPropietario(int propietarioId, String dni, String apellido, String nombre, String telefono, String email,  String clave) {
+    public clsPropietario(int propietarioId, int dni, String apellido, String nombre, int telefono, String email,  String clave) {
         this.propietarioId = propietarioId;
         this.nombre = nombre;
         this.dni = dni;
@@ -30,10 +38,10 @@ public class clsPropietario {
         this.propietarioId = propietarioId;
     }
     
-    public String getDni() {
+    public int getDni() {
         return dni;
     }
-    public void setDni(String dni) {
+    public void setDni(int dni) {
         this.dni = dni;
     }
 
@@ -51,10 +59,10 @@ public class clsPropietario {
         this.nombre = nombre;
     }
 
-    public String getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
-    public void setTelefono(String telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
 
@@ -71,4 +79,15 @@ public class clsPropietario {
     public void setClave(String email) {
         this.clave = clave;
     }
+
+    public boolean logueo(String cuenta, String contraseña) {
+
+        ArrayList<clsPropietario> arregloPropietarios = new ArrayList<>();
+        arregloPropietarios.add(new clsPropietario(1,37599310,"Francescoli","Enzo", 14665768, "ariel@gmail.com","123456"));
+
+        if(cuenta.equals("ariel@gmail.com") && contraseña.equals("123456")) {
+            return true;
+        } else return false;
+    }
+
 }

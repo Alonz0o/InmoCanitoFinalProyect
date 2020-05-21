@@ -6,43 +6,48 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.inmocanito.R;
 
 public class LoginActivity extends AppCompatActivity {
 
-    //Inicializando LoginViewModel para usarlo aqui
     private LoginViewModel LVM;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
 
-        //Inicializando LoginViewModel para usarlo aqui
-        LVM = ViewModelProviders.of(this).get(LoginViewModel.class);
-
+        LVM = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(LoginViewModel.class);
         final EditText etEma = findViewById(R.id.etLEmail);
         final EditText etCon = findViewById(R.id.etLContraseña);
         final Button btnLogin = findViewById(R.id.btnLogin);
         final ProgressBar loadingProgressBar = findViewById(R.id.pbLoading);
-
+        final TextView tvMensaje = findViewById(R.id.tvMansaje);
+        LVM.getTvMensaje().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                tvMensaje.setText(s);
+            }
+        });
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LVM.login(etEma.getText().toString(), etCon.getText().toString());
+                LVM.logueo(etEma.getText().toString(), etCon.getText().toString(), loadingProgressBar);
             }
         });
 
@@ -114,22 +119,8 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean vedad;
-                vedad = LVM.loginAriel(etEma.getText().toString(), etCon.getText().toString());
-
-                if (vedad == true){
-                LVM.login(etEma.getText().toString(), etCon.getText().toString());
-                    loadingProgressBar.setVisibility(View.VISIBLE);
-                }
-                else {loadingProgressBar.setVisibility(View.INVISIBLE);}
-            }
-        });
     }
 
-//Esto es afuera de onCreate
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
         // TODO : initiate successful logged in experience

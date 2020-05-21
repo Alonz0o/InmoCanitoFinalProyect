@@ -1,6 +1,6 @@
 package com.example.inmocanito.ui.pagos;
 
-import android.net.Uri;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,65 +8,50 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.Navigation;
-
 import com.example.inmocanito.R;
+import com.example.inmocanito.model.clsPago;
 import com.example.inmocanito.model.clsPropiedad;
 import com.example.inmocanito.ui.propiedades.PropiedadesViewModel;
-import com.google.android.material.tabs.TabLayout;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Observable;
-import java.util.Observer;
-
 
 public class PagosFragment extends Fragment {
 
-    private ArrayList<clsPropiedad> propiedades = new ArrayList<>();
-    private ArrayList<clsPropiedad> propiedadesmuteable = new ArrayList<>();
-    private PropiedadesViewModel propiedadesViewModel;
-
-    private PropiedadesViewModel PVM;
-    private TabLayout tbPropiedades;
+    private PagosViewModel pagosVM;
+    private PropiedadesViewModel propiedadVM;
+    private Context context;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_propiedades, container, false);
 
-        propiedadesViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(PropiedadesViewModel.class);
+        pagosVM = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(PagosViewModel.class);
+        propiedadVM = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(PropiedadesViewModel.class);
+        context = getActivity();
 
-        View view = inflater.inflate(R.layout.fragment_pagos, container, false);
-        final ListView lvProdiedad = view.findViewById(R.id.lvPropiedad);
+        final ArrayAdapter<clsPago> cargarPagos = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, pagosVM.obtenerPagos());
+        ArrayAdapter<clsPropiedad> listarPropiedades = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, propiedadVM.obtenerPropiedades());
 
-        propiedadesViewModel.cargarPropiedad(propiedades);
-        ArrayAdapter<clsPropiedad> adaptador = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, propiedades);
-        lvProdiedad.setAdapter(adaptador);
+        ArrayAdapter<String> cargarLv = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, propiedadVM.listarPropiedades());
 
-        //propiedadesmuteable = new ArrayList<>();
-
-
-
-        //final Observer<List<clsPropiedad>> listaObserver = new Observer<List<clsPropiedad>>() {
-        //  @Override
-        // public void onChanged(List<clsPropiedad> propiedades) {
-        //   lvProdiedad.setAdapter(new Adapter(propiedades));
-        //}
-        //};
+        final ListView lvPropiedades = view.findViewById(R.id.lvPropiedad);
+        lvPropiedades.setAdapter(cargarLv);
 
 
-        //propiedadesViewModel.getPropiedades().observe(getViewLifecycleOwner(), listaObserver);
+        lvPropiedades.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                clsPago pago = (clsPago) cargarPagos.getItem(position);
+                pago.setNumpago(pago.getNumpago());
+                pago.setFecha(pago.getFecha());
+                pago.setImporte(pago.getImporte());
+                startActivity(PagosDetallesActivity.getCallingIntent(context, pago));
+            }
+        });
 
 
         return view;
-    }
-
-    public interface OnFragmentInteractionListener {
-        void OnFragmentInteraction(Uri uri);
     }
 
 }

@@ -2,9 +2,7 @@ package com.example.inmocanito.ui.inquilinos;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-
 import com.example.inmocanito.model.clsInquilino;
-
 import java.util.ArrayList;
 
 public class InquilinosViewModel extends ViewModel {
@@ -21,14 +19,14 @@ public class InquilinosViewModel extends ViewModel {
 
 
     public ArrayList obtenerInquilinos (){
-        arregloInquilinos.add(new clsInquilino(1,"31599310","Ariel","Suarez","Sanluis","200552022"));
-        arregloInquilinos.add(new clsInquilino(2,"32599311","Juan","Gimenez","Mendoza","200553022"));
-        arregloInquilinos.add(new clsInquilino(3,"33599312","Paola","Fernandez","Chile","20001512"));
-        arregloInquilinos.add(new clsInquilino(4,"34599313","Jernan","Chumbo","SanLuan","20015120"));
+        arregloInquilinos.add(new clsInquilino(1,"31599310","Suarez","Ariel","Sanluis 123","200552022"));
+        arregloInquilinos.add(new clsInquilino(2,"32599311","Gimenez","Juan","Mendoza 123","200553022"));
+        arregloInquilinos.add(new clsInquilino(3,"33599312","Fernandez","Paola","Chile 123","20001512"));
+        arregloInquilinos.add(new clsInquilino(4,"34599313","Chumbo","Disparo","SanLuan 123","20015120"));
 
         return arregloInquilinos;
     }
-    public ArrayList listarinkiss (){
+    public ArrayList listarInquilinos(){
 
         int contador=-1;
         for(clsInquilino inquilino: arregloInquilinos){

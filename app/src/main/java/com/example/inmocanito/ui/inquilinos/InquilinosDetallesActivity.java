@@ -3,11 +3,13 @@ package com.example.inmocanito.ui.inquilinos;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.inmocanito.R;
 import com.example.inmocanito.model.clsInquilino;
 
@@ -16,17 +18,18 @@ public class InquilinosDetallesActivity extends AppCompatActivity {
         // Required empty public constructor
     }
 
-    private TextView tvDni;
-    private TextView tvApellido;
-    private TextView tvNombre;
-    private TextView tvTelefono;
-    private TextView tvDireccion;
+    private EditText etDni;
+    private EditText etApellido;
+    private EditText etNombre;
+    private EditText etTelefono;
+    private EditText etDireccion;
     private clsInquilino inquilino;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_inquilinos_detalles);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         try{
             inquilino = (clsInquilino) getIntent().getExtras().getSerializable("InquilinoModel");
@@ -34,17 +37,17 @@ public class InquilinosDetallesActivity extends AppCompatActivity {
             finish();
         }
 
-        tvDni = (TextView) findViewById(R.id.tvDetalleInquilinoDni);
-        tvApellido = (TextView) findViewById(R.id.tvDetalleInquilinoApellido);
-        tvNombre = (TextView) findViewById(R.id.tvDetalleInquilinoNombre);
-        tvTelefono = (TextView) findViewById(R.id.tvDetalleInquilinoTelefono);
-        tvDireccion = (TextView) findViewById(R.id.tvDetalleInquilinoDireccion);
+        etDni = (EditText) findViewById(R.id.etDetalleInquilinoDni);
+        etApellido = (EditText) findViewById(R.id.etDetalleInquilinoApellido);
+        etNombre = (EditText) findViewById(R.id.etDetalleInquilinoNombre);
+        etTelefono = (EditText) findViewById(R.id.etDetalleInquilinoTelefono);
+        etDireccion = (EditText) findViewById(R.id.etDetalleInquilinoDireccion);
 
-        tvDni.setText(inquilino.getDni());
-        tvApellido.setText(inquilino.getApellido());
-        tvNombre.setText(inquilino.getNombre());
-        tvTelefono.setText(inquilino.getTelefono());
-        tvDireccion.setText(inquilino.getDireccion());
+        etDni.setText("Dni: " + inquilino.getDni());
+        etApellido.setText("Apellido: " + inquilino.getApellido());
+        etNombre.setText("Nombre: " + inquilino.getNombre());
+        etTelefono.setText("Telefono: " + inquilino.getTelefono());
+        etDireccion.setText("Direccion: " + inquilino.getDireccion());
 
     }
 
@@ -52,5 +55,13 @@ public class InquilinosDetallesActivity extends AppCompatActivity {
         Intent intent= new Intent(context, InquilinosDetallesActivity.class);
         intent.putExtra("InquilinoModel",classInquilino);
         return intent;
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == android.R.id.home){
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

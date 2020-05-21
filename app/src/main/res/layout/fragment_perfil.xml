@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondocanito"
     tools:context=".ui.perfil.PerfilFragment">
 
 
@@ -14,6 +15,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
+        android:enabled="false"
         android:hint="DNI"
         android:inputType="number"
         android:selectAllOnFocus="true"
@@ -29,6 +31,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
+        android:enabled="false"
         android:hint="Apellido"
         android:inputType="text"
         android:selectAllOnFocus="true"
@@ -44,6 +47,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
+        android:enabled="false"
         android:hint="Nombre"
         android:inputType="text"
         android:selectAllOnFocus="true"
@@ -59,6 +63,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
+        android:enabled="false"
         android:hint="Telefono"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,6 +78,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
+        android:enabled="false"
         android:hint="Correo electrónico"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
@@ -88,6 +94,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
+        android:enabled="false"
         android:hint="Contraseña"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
@@ -127,7 +134,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvPEditar" />
 
     <ImageView
-        android:id="@+id/imgDniCorrecto"
+        android:id="@+id/imgCorrecto1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_check_20dp"
@@ -135,5 +142,56 @@
         app:layout_constraintBottom_toBottomOf="@+id/etPDni"
         app:layout_constraintEnd_toEndOf="@+id/etPDni"
         app:layout_constraintTop_toTopOf="@+id/etPDni" />
+
+    <ImageView
+        android:id="@+id/imgCorrecto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check_20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/etPApellido"
+        app:layout_constraintEnd_toEndOf="@+id/etPApellido"
+        app:layout_constraintTop_toTopOf="@+id/etPApellido" />
+
+    <ImageView
+        android:id="@+id/imgCorrecto3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check_20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/etPNnombre"
+        app:layout_constraintEnd_toEndOf="@+id/etPNnombre"
+        app:layout_constraintTop_toTopOf="@+id/etPNnombre" />
+
+    <ImageView
+        android:id="@+id/imgCorrecto4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check_20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/etPTelefono"
+        app:layout_constraintEnd_toEndOf="@+id/etPTelefono"
+        app:layout_constraintTop_toTopOf="@+id/etPTelefono" />
+
+    <ImageView
+        android:id="@+id/imgCorrecto5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check_20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/etPEmail"
+        app:layout_constraintEnd_toEndOf="@+id/etPEmail"
+        app:layout_constraintTop_toTopOf="@+id/etPEmail" />
+
+    <ImageView
+        android:id="@+id/imgCorrecto6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check_20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/etPContraseña"
+        app:layout_constraintEnd_toEndOf="@+id/etPContraseña"
+        app:layout_constraintTop_toTopOf="@+id/etPContraseña" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

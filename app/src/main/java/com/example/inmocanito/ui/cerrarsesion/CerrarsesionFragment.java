@@ -19,11 +19,12 @@ public class CerrarsesionFragment extends Fragment {
     private View v;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_inicio, container, false);
         v=view;
         cerrar();
         return view;
     }
+
     private void cerrar(){
         new AlertDialog.Builder(getContext())
                 .setTitle("Cerrar Aplicacion")

@@ -1,39 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.propiedades.PropiedadesFragment">
+    android:background="@drawable/fondocanito">
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <EditText
-        android:id="@+id/etPropietarioDomicilio"
+    <ListView
+        android:id="@+id/lvPropiedad"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Calle, altura"
-        android:inputType="text"
-        android:selectAllOnFocus="true" />
-
-    <EditText
-        android:id="@+id/etPropietarioAmbientes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Cantidad de ambientes"
-        android:inputType="text"
-        android:selectAllOnFocus="true" />
-
-    <EditText
-        android:id="@+id/etPropietarioNombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Calle, Altura "
-        android:inputType="text" />
-
-    <Spinner
-        android:id="@+id/spinnerUso"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="10dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

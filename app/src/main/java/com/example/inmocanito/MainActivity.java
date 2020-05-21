@@ -1,9 +1,11 @@
 package com.example.inmocanito;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.inmocanito.ui.propiedades.PropiedadesViewModel;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -17,7 +19,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class MainActivity extends AppCompatActivity{
 
     private AppBarConfiguration mAppBarConfiguration;
     @Override
@@ -39,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_perfil, R.id.nav_propiedades, R.id.nav_inquilinos,R.id.inicio,R.id.pagosActivity,R.id.nav_propiedades,R.id.inquilinosDetalles)
+                R.id.nav_perfil, R.id.nav_propiedades, R.id.nav_inquilinos,R.id.inicio,R.id.nav_propiedades,R.id.nav_pagos,R.id.nav_contratos)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

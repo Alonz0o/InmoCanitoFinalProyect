@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
@@ -22,7 +21,7 @@
             android:icon="@drawable/ic_door_key"
             android:title="@string/menu_inquilinos" />
         <item
-            android:id="@+id/pagosActivity"
+            android:id="@+id/nav_pagos"
             android:icon="@drawable/ic_money_bag"
             android:title="@string/menu_pagos" />
         <item
@@ -33,7 +32,7 @@
     <item android:title="Opciones">
         <menu>
             <item
-                android:id="@+id/nav_cerrarsesion"
+                android:id="@+id/cerrarsesionFragment"
                 android:icon="@drawable/ic_signs"
                 android:title="@string/menu_cerrarsesion" />
         </menu>

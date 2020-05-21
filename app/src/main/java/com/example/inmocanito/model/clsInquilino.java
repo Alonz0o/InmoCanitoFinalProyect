@@ -6,9 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
 import com.example.inmocanito.R;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -107,13 +105,6 @@ public class clsInquilino implements Serializable {
                 LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
                 convertView = layoutInflater.inflate(R.layout.fragment_inquilinos_detalles,null);
             }
-            TextView tvDniInqui = (TextView)convertView.findViewById(R.id.tvDetalleInquilinoDni);
-            TextView tvApellidoInqui = (TextView)convertView.findViewById(R.id.tvDetalleInquilinoApellido);
-            TextView tvNombreInqui = (TextView)convertView.findViewById(R.id.tvDetalleInquilinoNombre);
-
-            tvDniInqui.setText(arrayList.get(position).getDni());
-            tvApellidoInqui.setText(arrayList.get(position).getApellido());
-            tvNombreInqui.setText(arrayList.get(position).getNombre());
             return convertView;
         }
     }
