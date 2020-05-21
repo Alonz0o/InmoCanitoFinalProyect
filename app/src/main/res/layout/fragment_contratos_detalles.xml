@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondocanito"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <EditText
+        android:id="@+id/etContratoFechaInicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:textStyle="bold"
+        android:hint="Fecha de Inicio del contrato"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etContratoFechaFin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:textStyle="bold"
+        android:hint="Fecha de Fin del contrato"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etContratoPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:textStyle="bold"
+        android:hint="Precio del contrato"
+        android:inputType="text" />
+</LinearLayout>

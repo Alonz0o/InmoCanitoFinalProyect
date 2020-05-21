@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondocanito"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <EditText
+        android:id="@+id/etDetallePagoNumPago"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:textStyle="bold"
+        android:hint="Numero de la actividad"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etDetallePagoFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:textStyle="bold"
+        android:hint="Fecha de pago de la propiedad"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etDetallePagoImporte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:textStyle="bold"
+        android:hint="Importe total de la propiedad"
+        android:inputType="text" />
+
+</LinearLayout>

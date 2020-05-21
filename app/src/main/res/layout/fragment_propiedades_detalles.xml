@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondocanito"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <EditText
+        android:id="@+id/etPropiedadDomicilio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:hint="Calle, altura"
+        android:inputType="text"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etPropiedadAmbientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:hint="Cantidad de ambientes"
+        android:inputType="number"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etPropiedadTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:hint="Tipo de la propiedad"
+        android:textStyle="bold"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etPropiedadUso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:textStyle="bold"
+        android:hint="Uso de la propiedad"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etPropiedadPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:textStyle="bold"
+        android:hint="Precio de la propiedad"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etPropiedadDisponible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:hint="Disponibilidad de la propiedad"
+        android:textStyle="bold"
+        android:inputType="text"
+        android:selectAllOnFocus="true" />
+
+</LinearLayout>
